@@ -5,7 +5,7 @@ const AppError =require("../utils/appError")
 
 
 
-const totlaPriceCalc =(cart)=>{
+const totalPriceCalc =(cart)=>{
     cart.totalPrice =cart.items.reduce((sum, item)=> sum+(item.quantity *item.price), 0)
 };
 
@@ -32,10 +32,6 @@ const cartAdd =asyncHandler(async(req, res)=>{
             items: [],
             totalPrice: 0
         });
-        return res.status(201).json({
-            status:"success",
-            data: cart
-        });
     };
 
     const indexItem =cart.items.findIndex(item => item.product.toString() === productId);
@@ -52,7 +48,7 @@ const cartAdd =asyncHandler(async(req, res)=>{
             quantity:quan
         });
     }
-    totalPriceCalc();
+    totalPriceCalc(cart);
 
     await cart.save();
     res.status(200).json({
@@ -97,7 +93,9 @@ const itemUpdate =asyncHandler(async(req, res)=>{
         throw new AppError("Item not in cart", 404);
     };
     if (quan <= 0){
-        cart.items.splice(indexItem, 1)
+        cart.items.splice(itemIndex, 1)
+    }else{
+        cart.items[itemIndex].quantity =quan;
     }
     totalPriceCalc(cart);
     await cart.save();

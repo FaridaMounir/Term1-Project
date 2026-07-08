@@ -193,12 +193,6 @@ ecommerce-api/
 # ▶️ Available Scripts
 
 ```bash
-npm run dev
-```
-
-Runs the application in development mode.
-
-```bash
 npm start
 ```
 

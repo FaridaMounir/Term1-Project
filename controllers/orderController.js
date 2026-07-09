@@ -2,37 +2,45 @@ const Order =require("../models/orderSchema");
 const Cart =require("../models/cartSchema");
 const asyncHandler =require("../utils/asyncHandler");
 const AppError =require("../utils/appError");
-
+const Product =require("../models/productSchema");
 const checkOut =asyncHandler(async(req, res)=>{
-    const {userId, shippingAddress} =req.body;
+    const {user, shippingAddress} =req.body;
 
-    const cart =await Cart.findOne({userId}).populate("items.product");
+    const cart =await Cart.findOne({user: user}).populate("items.product");
+
+
+
     if(!cart || cart.items.length ===0){
         throw new AppError("Cart is empty", 400);
     };
     let totalPrice =0;
     let orderItems =[];
 
-    for(const cartItem of cart.items){
-        const product =cartItem.product;
-        if(product.stock < cartItem.quantity){
+
+    for (const cartItem of cart.items){
+        const product = cartItem.product;
+        if (!product) {
+            throw new AppError("One of the items in your cart is no longer available.", 404);
+        }
+        if (product.stock < cartItem.quantity) {
             throw new AppError(`${product.name}'s stock not enough.`, 400);
         }
 
-        totalPrice += product.price *cartItem.quantity
-        orderItems.push({
-            name: product.name,
-            product: product._id,
-            price: product.price,
-            quantity: cartItem.quantity
-        
-        });
+            totalPrice += product.price *cartItem.quantity
+            orderItems.push({
+                name: product.name,
+                product: product._id,
+                price: product.price,
+                quantity: cartItem.quantity
+            
+            });
 
     };
-    for(const cartItem of cart.items){
-        cartItem.product.stock -=cartItem.quantity;
-        await cartItem.product.save();
-    };
+    for (const cartItem of cart.items) {
+         await Product.findByIdAndUpdate(cartItem.product._id, {
+        $inc: { stock: -cartItem.quantity }
+    });
+}
     const orderNumber =Date.now()+Math.floor(Math.random() *1000)
     const newOrder =new Order({
         orderNumber: orderNumber,
@@ -55,7 +63,7 @@ const checkOut =asyncHandler(async(req, res)=>{
 const allOrders =asyncHandler(async(req, res)=>{
     const orders =await Order.find();
     res.status(200).json({
-        order: orders
+        orders: orders
     });
 });
 
@@ -74,10 +82,6 @@ const getById =asyncHandler(async(req, res)=>{
 
 const update =asyncHandler(async(req, res)=>{
     const {status} =req.body;
-    const Status =["pending", "shipping", "delivered", "cancelled"];
-    if(!Status.includes(status)){
-        throw new AppError("Invalid status", 400);
-    };
 
     const order =await Order.findById(req.params.id);
 

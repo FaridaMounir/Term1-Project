@@ -19,7 +19,18 @@ const config =require("./config/config");
 const app = express();
 
 app.use(express.json());
-app.use(mongoSanitize())
+
+app.use((req, res, next) => {
+  Object.defineProperty(req, 'query', {
+    value: req.query,
+    writable: true,
+    enumerable: true,
+    configurable: true
+  });
+  next();
+});
+
+app.use(mongoSanitize());
 
 
 app.use("/api/categories", categoryRouter);

@@ -1,0 +1,2001 @@
+{
+  "info": {
+    "_postman_id": "c9bde2f8-8e57-41ea-8480-8f10c66f8204",
+    "name": "E-Commerce API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55888232"
+  },
+  "item": [
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get all category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categories",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get all category",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "67"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"43-LTxsCcUShCh6ugH222nexA1ITCg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Jul 2026 21:23:38 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"message\": \"Data loaded successfully\",\n    \"data\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "Post category",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"SportsBalls\",\r\n    \"description\":\"Volleyballs, basketballs and footballs.\",\r\n    \"slug\": \"sportsBalls\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/categories",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Post category",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"SportsBalls\",\r\n    \"description\":\"Volleyballs, basketballs and footballs.\",\r\n    \"slug\": \"sportsBalls\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "225"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"e1-S+fB3deQJs7wjWmtxdZ/k/RNMzc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Jul 2026 21:36:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": {\n        \"name\": \"SportsBalls\",\n        \"description\": \"Volleyballs, basketballs and footballs.\",\n        \"_id\": \"6a4d7159624975932d1d959b\",\n        \"createdAt\": \"2026-07-07T21:36:26.913Z\",\n        \"updatedAt\": \"2026-07-07T21:36:26.913Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get ID category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categories/6a4d7159624975932d1d959b",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "6a4d7159624975932d1d959b"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get ID category",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/6a4d7159624975932d1d959b",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "6a4d7159624975932d1d959b"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "262"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"106-BKYUOlM1ix8NxA0E4njSY7NF/4w\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Jul 2026 21:42:22 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"message\": \"Data loaded successfully\",\n    \"data\": {\n        \"_id\": \"6a4d7159624975932d1d959b\",\n        \"name\": \"SportsBalls\",\n        \"description\": \"Volleyballs, basketballs and footballs.\",\n        \"createdAt\": \"2026-07-07T21:36:26.913Z\",\n        \"updatedAt\": \"2026-07-07T21:36:26.913Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Patch category",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"description\":\"The best sports balls out there!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/categories/6a4d7159624975932d1d959b",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "6a4d7159624975932d1d959b"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Patch category",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"description\":\"The best sports balls out there!\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/6a4d7159624975932d1d959b",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "6a4d7159624975932d1d959b"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "218"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"da-hWcDxNuekDQTgVCOg5VxfRW00UI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Jul 2026 21:47:31 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"6a4d7159624975932d1d959b\",\n        \"name\": \"SportsBalls\",\n        \"description\": \"The best sports balls out there!\",\n        \"createdAt\": \"2026-07-07T21:36:26.913Z\",\n        \"updatedAt\": \"2026-07-07T21:47:29.396Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"description\":\"The best sports balls out there!\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/categories/6a4d7159624975932d1d959b",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "6a4d7159624975932d1d959b"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete category",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"description\":\"The best sports balls out there!\"\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/6a4d7159624975932d1d959b",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "6a4d7159624975932d1d959b"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "63"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3f-8ikrIP0O80EO9dMp1ftuIYCs4CY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 07 Jul 2026 21:50:27 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"message\": \"Category deleted successfully.\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Post product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Basketball\",\r\n    \"description\":\"Basket ball size 6\",\r\n    \"price\": 821,\r\n    \"stock\":23,\r\n    \"category\": \"6a4e47bc6761e025339a13df\",\r\n    \"images\": [\"https://www.images.com/basketballs\"],\r\n    \"inStock\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Post product",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Volleyball\",\r\n    \"description\":\"High-quality volleyball for matches\",\r\n    \"price\": 763,\r\n    \"stock\":82,\r\n    \"category\": \"6a4e47bc6761e025339a13df\",\r\n    \"images\": [\"https://www.images.com/volleyballs\"],\r\n    \"inStock\": true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "344"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"158-nz+hH0cbpklDyIj3DaShWapvTT4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 08 Jul 2026 12:54:21 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": {\n        \"name\": \"Volleyball\",\n        \"description\": \"High-quality volleyball for matches\",\n        \"price\": 763,\n        \"stock\": 82,\n        \"category\": \"6a4e47bc6761e025339a13df\",\n        \"images\": [\n            \"https://www.images.com/volleyballs\"\n        ],\n        \"inStock\": true,\n        \"_id\": \"6a4e487c6761e025339a13e2\",\n        \"createdAt\": \"2026-07-08T12:54:20.791Z\",\n        \"updatedAt\": \"2026-07-08T12:54:20.791Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get products",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Volleyball\",\r\n    \"description\":\"High-quality volleyball for matches\",\r\n    \"price\": 763,\r\n    \"stock\":82,\r\n    \"category\": \"6a4e47bc6761e025339a13df\",\r\n    \"images\": [\"https://www.images.com/volleyballs\"],\r\n    \"inStock\": true\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get products",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Volleyball\",\r\n    \"description\":\"High-quality volleyball for matches\",\r\n    \"price\": 763,\r\n    \"stock\":82,\r\n    \"category\": \"6a4e47bc6761e025339a13df\",\r\n    \"images\": [\"https://www.images.com/volleyballs\"],\r\n    \"inStock\": true\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "827"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"33b-/JpgmOd/22ccABmWXWIbsqEmQUc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 08 Jul 2026 22:04:11 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"6a4e487c6761e025339a13e2\",\n            \"name\": \"Volleyball\",\n            \"description\": \"High-quality volleyball for matches\",\n            \"price\": 763,\n            \"stock\": 82,\n            \"category\": {\n                \"_id\": \"6a4e47bc6761e025339a13df\",\n                \"name\": \"SportsBalls\",\n                \"description\": \"Volleyballs, basketballs and footballs.\"\n            },\n            \"images\": [\n                \"https://www.images.com/volleyballs\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-08T12:54:20.791Z\",\n            \"updatedAt\": \"2026-07-08T12:54:20.791Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a4ec94db8901087c4120274\",\n            \"name\": \"Basketball\",\n            \"description\": \"Basket ball size 6\",\n            \"price\": 821,\n            \"stock\": 23,\n            \"category\": {\n                \"_id\": \"6a4e47bc6761e025339a13df\",\n                \"name\": \"SportsBalls\",\n                \"description\": \"Volleyballs, basketballs and footballs.\"\n            },\n            \"images\": [\n                \"https://www.images.com/basketballs\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-08T22:03:57.522Z\",\n            \"updatedAt\": \"2026-07-08T22:03:57.522Z\",\n            \"__v\": 0\n        }\n    ],\n    \"result\": 2\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get by cat.Id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Volleyball\",\r\n    \"description\":\"High-quality volleyball for matches\",\r\n    \"price\": 763,\r\n    \"stock\":82,\r\n    \"category\": \"6a4e47bc6761e025339a13df\",\r\n    \"images\": [\"https://www.images.com/volleyballs\"],\r\n    \"inStock\": true\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products?category=6a4e47bc6761e025339a13df",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "6a4e47bc6761e025339a13df"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get by cat.Id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Volleyball\",\r\n    \"description\":\"High-quality volleyball for matches\",\r\n    \"price\": 763,\r\n    \"stock\":82,\r\n    \"category\": \"6a4e47bc6761e025339a13df\",\r\n    \"images\": [\"https://www.images.com/volleyballs\"],\r\n    \"inStock\": true\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?category=6a4e47bc6761e025339a13df",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "6a4e47bc6761e025339a13df"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "827"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"33b-/JpgmOd/22ccABmWXWIbsqEmQUc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 08 Jul 2026 22:04:58 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"6a4e487c6761e025339a13e2\",\n            \"name\": \"Volleyball\",\n            \"description\": \"High-quality volleyball for matches\",\n            \"price\": 763,\n            \"stock\": 82,\n            \"category\": {\n                \"_id\": \"6a4e47bc6761e025339a13df\",\n                \"name\": \"SportsBalls\",\n                \"description\": \"Volleyballs, basketballs and footballs.\"\n            },\n            \"images\": [\n                \"https://www.images.com/volleyballs\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-08T12:54:20.791Z\",\n            \"updatedAt\": \"2026-07-08T12:54:20.791Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a4ec94db8901087c4120274\",\n            \"name\": \"Basketball\",\n            \"description\": \"Basket ball size 6\",\n            \"price\": 821,\n            \"stock\": 23,\n            \"category\": {\n                \"_id\": \"6a4e47bc6761e025339a13df\",\n                \"name\": \"SportsBalls\",\n                \"description\": \"Volleyballs, basketballs and footballs.\"\n            },\n            \"images\": [\n                \"https://www.images.com/basketballs\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-08T22:03:57.522Z\",\n            \"updatedAt\": \"2026-07-08T22:03:57.522Z\",\n            \"__v\": 0\n        }\n    ],\n    \"result\": 2\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get by inStock",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Volleyball\",\r\n    \"description\":\"High-quality volleyball for matches\",\r\n    \"price\": 763,\r\n    \"stock\":82,\r\n    \"category\": \"6a4e47bc6761e025339a13df\",\r\n    \"images\": [\"https://www.images.com/volleyballs\"],\r\n    \"inStock\": true\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products?inStock=true",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "inStock",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get by inStock",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Volleyball\",\r\n    \"description\":\"High-quality volleyball for matches\",\r\n    \"price\": 763,\r\n    \"stock\":82,\r\n    \"category\": \"6a4e47bc6761e025339a13df\",\r\n    \"images\": [\"https://www.images.com/volleyballs\"],\r\n    \"inStock\": true\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?inStock=true",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "inStock",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "827"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"33b-/JpgmOd/22ccABmWXWIbsqEmQUc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 08 Jul 2026 22:09:25 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"6a4e487c6761e025339a13e2\",\n            \"name\": \"Volleyball\",\n            \"description\": \"High-quality volleyball for matches\",\n            \"price\": 763,\n            \"stock\": 82,\n            \"category\": {\n                \"_id\": \"6a4e47bc6761e025339a13df\",\n                \"name\": \"SportsBalls\",\n                \"description\": \"Volleyballs, basketballs and footballs.\"\n            },\n            \"images\": [\n                \"https://www.images.com/volleyballs\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-08T12:54:20.791Z\",\n            \"updatedAt\": \"2026-07-08T12:54:20.791Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6a4ec94db8901087c4120274\",\n            \"name\": \"Basketball\",\n            \"description\": \"Basket ball size 6\",\n            \"price\": 821,\n            \"stock\": 23,\n            \"category\": {\n                \"_id\": \"6a4e47bc6761e025339a13df\",\n                \"name\": \"SportsBalls\",\n                \"description\": \"Volleyballs, basketballs and footballs.\"\n            },\n            \"images\": [\n                \"https://www.images.com/basketballs\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-08T22:03:57.522Z\",\n            \"updatedAt\": \"2026-07-08T22:03:57.522Z\",\n            \"__v\": 0\n        }\n    ],\n    \"result\": 2\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get by min max",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products?minPrice=800&maxPrice=1000",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "minPrice",
+                  "value": "800"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "1000"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get by min max",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?minPrice=800&maxPrice=1000",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "minPrice",
+                      "value": "800"
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "1000"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "425"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a9-jcrE2DsWmTEIOpzwnGTnvMHCiAo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 08 Jul 2026 22:11:05 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"6a4ec94db8901087c4120274\",\n            \"name\": \"Basketball\",\n            \"description\": \"Basket ball size 6\",\n            \"price\": 821,\n            \"stock\": 23,\n            \"category\": {\n                \"_id\": \"6a4e47bc6761e025339a13df\",\n                \"name\": \"SportsBalls\",\n                \"description\": \"Volleyballs, basketballs and footballs.\"\n            },\n            \"images\": [\n                \"https://www.images.com/basketballs\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-08T22:03:57.522Z\",\n            \"updatedAt\": \"2026-07-08T22:03:57.522Z\",\n            \"__v\": 0\n        }\n    ],\n    \"result\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get by search",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products?search=volleyBall",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "volleyBall"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get by search",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products?search=volleyBall",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "volleyBall"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "442"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1ba-msk+2ohoUf1J49LmPSCZPMiNM1Q\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 08 Jul 2026 22:13:26 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"6a4e487c6761e025339a13e2\",\n            \"name\": \"Volleyball\",\n            \"description\": \"High-quality volleyball for matches\",\n            \"price\": 763,\n            \"stock\": 82,\n            \"category\": {\n                \"_id\": \"6a4e47bc6761e025339a13df\",\n                \"name\": \"SportsBalls\",\n                \"description\": \"Volleyballs, basketballs and footballs.\"\n            },\n            \"images\": [\n                \"https://www.images.com/volleyballs\"\n            ],\n            \"inStock\": true,\n            \"createdAt\": \"2026-07-08T12:54:20.791Z\",\n            \"updatedAt\": \"2026-07-08T12:54:20.791Z\",\n            \"__v\": 0\n        }\n    ],\n    \"result\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get by prod.Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products/6a4e487c6761e025339a13e2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "6a4e487c6761e025339a13e2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get by prod.Id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/products/6a4e487c6761e025339a13e2",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products",
+                    "6a4e487c6761e025339a13e2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "429"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1ad-b+T4J3RfcGQ7F2f5cERCVSYSz5A\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 08 Jul 2026 22:34:57 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": {\n        \"_id\": \"6a4e487c6761e025339a13e2\",\n        \"name\": \"Volleyball\",\n        \"description\": \"High-quality volleyball for matches\",\n        \"price\": 763,\n        \"stock\": 82,\n        \"category\": {\n            \"_id\": \"6a4e47bc6761e025339a13df\",\n            \"name\": \"SportsBalls\",\n            \"description\": \"Volleyballs, basketballs and footballs.\"\n        },\n        \"images\": [\n            \"https://www.images.com/volleyballs\"\n        ],\n        \"inStock\": true,\n        \"createdAt\": \"2026-07-08T12:54:20.791Z\",\n        \"updatedAt\": \"2026-07-08T12:54:20.791Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"price\": 550,\r\n    \"stock\": 19\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products/6a4e487c6761e025339a13e2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "6a4e487c6761e025339a13e2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Patch",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"price\": 550,\r\n    \"stock\": 19\r\n    \r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products/6a4e487c6761e025339a13e2",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products",
+                    "6a4e487c6761e025339a13e2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "344"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"158-HMrLrJl/G87TLCGb+nGSVMakgIU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 08 Jul 2026 22:38:44 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": {\n        \"_id\": \"6a4e487c6761e025339a13e2\",\n        \"name\": \"Volleyball\",\n        \"description\": \"High-quality volleyball for matches\",\n        \"price\": 550,\n        \"stock\": 19,\n        \"category\": \"6a4e47bc6761e025339a13df\",\n        \"images\": [\n            \"https://www.images.com/volleyballs\"\n        ],\n        \"inStock\": true,\n        \"createdAt\": \"2026-07-08T12:54:20.791Z\",\n        \"updatedAt\": \"2026-07-08T22:38:44.426Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"price\": 550,\r\n    \"stock\": 19\r\n    \r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products/6a4ec94db8901087c4120274",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "6a4ec94db8901087c4120274"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete product",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"price\": 550,\r\n    \"stock\": 19\r\n    \r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/products/6a4ec94db8901087c4120274",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "products",
+                    "6a4ec94db8901087c4120274"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "62"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3e-1Y+N3t1M7gI7pDNB2psbXKvbBac\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 12:21:42 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"message\": \"Product deleted successfully.\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "item": [
+        {
+          "name": "Add to cart",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n \"user\": \"theSp0rtsPro\",\r\n \"productId\":\"6a4f97934b399a977c415cc2\",\r\n \"quantity\":3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cart/items",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "items"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Add to cart",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n \"user\": \"theSp0rtsPro\",\r\n \"productId\":\"6a4f97934b399a977c415cc2\",\r\n \"quantity\":3\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "295"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"127-xIOUDPQSun6KbdCp9V8o/5CAd4g\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 18:26:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"user\": \"theSp0rtsPro\",\n        \"items\": [\n            {\n                \"product\": \"6a4f97934b399a977c415cc2\",\n                \"quantity\": 3,\n                \"price\": 981,\n                \"_id\": \"6a4fe7d3246f8aa7b8a659c0\"\n            }\n        ],\n        \"totalPrice\": 2943,\n        \"_id\": \"6a4fe7d3246f8aa7b8a659bf\",\n        \"createdAt\": \"2026-07-09T18:26:27.984Z\",\n        \"updatedAt\": \"2026-07-09T18:26:27.984Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get by user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n \"user\": \"theSp0rtsPro\",\r\n \"productId\":\"6a4f97934b399a977c415cc2\",\r\n \"quantity\":3\r\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cart?user=theSp0rtsPro",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart"
+              ],
+              "query": [
+                {
+                  "key": "user",
+                  "value": "theSp0rtsPro"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get by user",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n \"user\": \"theSp0rtsPro\",\r\n \"productId\":\"6a4f97934b399a977c415cc2\",\r\n \"quantity\":3\r\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart?user=theSp0rtsPro",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart"
+                  ],
+                  "query": [
+                    {
+                      "key": "user",
+                      "value": "theSp0rtsPro"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "333"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"14d-Pz2U2Iaujq7nV4q/zeW6NPiRpE4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 18:37:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"data\": {\n        \"_id\": \"6a4fe7d3246f8aa7b8a659bf\",\n        \"user\": \"theSp0rtsPro\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"6a4f97934b399a977c415cc2\",\n                    \"name\": \"Football\",\n                    \"price\": 981\n                },\n                \"quantity\": 3,\n                \"price\": 981,\n                \"_id\": \"6a4fe7d3246f8aa7b8a659c0\"\n            }\n        ],\n        \"totalPrice\": 2943,\n        \"createdAt\": \"2026-07-09T18:26:27.984Z\",\n        \"updatedAt\": \"2026-07-09T18:26:27.984Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update quantity",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"user\": \"theSp0rtsPro\",\r\n    \"quantity\": 7\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cart/items/6a4f97934b399a977c415cc2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "items",
+                "6a4f97934b399a977c415cc2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update quantity",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"user\": \"theSp0rtsPro\",\r\n    \"quantity\": 7\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items/6a4f97934b399a977c415cc2",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items",
+                    "6a4f97934b399a977c415cc2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "295"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"127-hKRAzdJ5/7lQBKVO0Ye+Pf7HW8Y\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 18:44:04 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"6a4fe7d3246f8aa7b8a659bf\",\n        \"user\": \"theSp0rtsPro\",\n        \"items\": [\n            {\n                \"product\": \"6a4f97934b399a977c415cc2\",\n                \"quantity\": 7,\n                \"price\": 981,\n                \"_id\": \"6a4fe7d3246f8aa7b8a659c0\"\n            }\n        ],\n        \"totalPrice\": 6867,\n        \"createdAt\": \"2026-07-09T18:26:27.984Z\",\n        \"updatedAt\": \"2026-07-09T18:44:04.056Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Remove 1 item",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"user\": \"theSp0rtsPro\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cart/items/6a4f97934b399a977c415cc2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "items",
+                "6a4f97934b399a977c415cc2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Remove 1 item",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"user\": \"theSp0rtsPro\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart/items/6a4f97934b399a977c415cc2",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart",
+                    "items",
+                    "6a4f97934b399a977c415cc2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "333"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"14d-djop6phHTwLHFgAJl5UdzsugsZQ\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 18:50:35 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"message\": \"Item removed successfully\",\n    \"data\": {\n        \"_id\": \"6a4fe7d3246f8aa7b8a659bf\",\n        \"user\": \"theSp0rtsPro\",\n        \"items\": [\n            {\n                \"product\": \"6a4e487c6761e025339a13e2\",\n                \"quantity\": 5,\n                \"price\": 550,\n                \"_id\": \"6a4fec9a246f8aa7b8a659c4\"\n            }\n        ],\n        \"totalPrice\": 2750,\n        \"createdAt\": \"2026-07-09T18:26:27.984Z\",\n        \"updatedAt\": \"2026-07-09T18:50:34.999Z\",\n        \"__v\": 2\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete cart",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"user\": \"theSp0rtsPro\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cart",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cart"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete cart",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"user\": \"theSp0rtsPro\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/cart",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "cart"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "244"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f4-RLiVBYwZ9bpU2BYCCG7QqYMSJuk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 18:56:04 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"Success\",\n    \"message\": \"All cart items deleted successfully\",\n    \"data\": {\n        \"_id\": \"6a4fe7d3246f8aa7b8a659bf\",\n        \"user\": \"theSp0rtsPro\",\n        \"items\": [],\n        \"totalPrice\": 0,\n        \"createdAt\": \"2026-07-09T18:26:27.984Z\",\n        \"updatedAt\": \"2026-07-09T18:56:03.824Z\",\n        \"__v\": 3\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Place order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n \"user\": \"theSp0rtsPro\",\r\n \"shippingAddress\": \"67 mohamed ali street\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/orders/checkout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "checkout"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Place order",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n \"user\": \"theSp0rtsPro\",\r\n \"shippingAddress\": \"67 mohamed ali street\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/checkout",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "checkout"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "520"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"208-ajqooNjeiFdSkFuA+MNQ1fcdcTY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 20:54:56 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"order is successfully placed\",\n    \"order\": {\n        \"orderNumber\": 1783630496640,\n        \"items\": [\n            {\n                \"product\": \"6a4e487c6761e025339a13e2\",\n                \"name\": \"Volleyball\",\n                \"price\": 550,\n                \"quantity\": 2,\n                \"_id\": \"6a500a9f05542bd013a5ae68\"\n            },\n            {\n                \"product\": \"6a4f97934b399a977c415cc2\",\n                \"name\": \"Football\",\n                \"price\": 981,\n                \"quantity\": 2,\n                \"_id\": \"6a500a9f05542bd013a5ae69\"\n            }\n        ],\n        \"totalPrice\": 3062,\n        \"status\": \"pending\",\n        \"shippingAddress\": \"67 mohamed ali street\",\n        \"_id\": \"6a500a9f05542bd013a5ae67\",\n        \"createdAt\": \"2026-07-09T20:54:55.808Z\",\n        \"updatedAt\": \"2026-07-09T20:54:55.808Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/orders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "482"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1e2-uXB3/cPXBGJrQ866a/okiXDJYvg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 21:09:21 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"orders\": [\n        {\n            \"_id\": \"6a500a9f05542bd013a5ae67\",\n            \"orderNumber\": 1783630496640,\n            \"items\": [\n                {\n                    \"product\": \"6a4e487c6761e025339a13e2\",\n                    \"name\": \"Volleyball\",\n                    \"price\": 550,\n                    \"quantity\": 2,\n                    \"_id\": \"6a500a9f05542bd013a5ae68\"\n                },\n                {\n                    \"product\": \"6a4f97934b399a977c415cc2\",\n                    \"name\": \"Football\",\n                    \"price\": 981,\n                    \"quantity\": 2,\n                    \"_id\": \"6a500a9f05542bd013a5ae69\"\n                }\n            ],\n            \"totalPrice\": 3062,\n            \"status\": \"pending\",\n            \"shippingAddress\": \"67 mohamed ali street\",\n            \"createdAt\": \"2026-07-09T20:54:55.808Z\",\n            \"updatedAt\": \"2026-07-09T20:54:55.808Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get by orderId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/orders/6a500a9f05542bd013a5ae67",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "6a500a9f05542bd013a5ae67"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get by orderId",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/6a500a9f05542bd013a5ae67",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "6a500a9f05542bd013a5ae67"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "498"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1f2-55998/5StU9bX2q4rJ0c59FgG0k\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 21:11:37 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"order\": {\n        \"_id\": \"6a500a9f05542bd013a5ae67\",\n        \"orderNumber\": 1783630496640,\n        \"items\": [\n            {\n                \"product\": \"6a4e487c6761e025339a13e2\",\n                \"name\": \"Volleyball\",\n                \"price\": 550,\n                \"quantity\": 2,\n                \"_id\": \"6a500a9f05542bd013a5ae68\"\n            },\n            {\n                \"product\": \"6a4f97934b399a977c415cc2\",\n                \"name\": \"Football\",\n                \"price\": 981,\n                \"quantity\": 2,\n                \"_id\": \"6a500a9f05542bd013a5ae69\"\n            }\n        ],\n        \"totalPrice\": 3062,\n        \"status\": \"pending\",\n        \"shippingAddress\": \"67 mohamed ali street\",\n        \"createdAt\": \"2026-07-09T20:54:55.808Z\",\n        \"updatedAt\": \"2026-07-09T20:54:55.808Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update order status",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"shipping\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/orders/6a500a9f05542bd013a5ae67/status",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "6a500a9f05542bd013a5ae67",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update order status",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"shipping\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/orders/6a500a9f05542bd013a5ae67/status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "orders",
+                    "6a500a9f05542bd013a5ae67",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "539"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"21b-D6oViNdY14pE48hbiFJW/5CiZD8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 21:15:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"message\": \"Status updates successfully\",\n    \"order\": {\n        \"_id\": \"6a500a9f05542bd013a5ae67\",\n        \"orderNumber\": 1783630496640,\n        \"items\": [\n            {\n                \"product\": \"6a4e487c6761e025339a13e2\",\n                \"name\": \"Volleyball\",\n                \"price\": 550,\n                \"quantity\": 2,\n                \"_id\": \"6a500a9f05542bd013a5ae68\"\n            },\n            {\n                \"product\": \"6a4f97934b399a977c415cc2\",\n                \"name\": \"Football\",\n                \"price\": 981,\n                \"quantity\": 2,\n                \"_id\": \"6a500a9f05542bd013a5ae69\"\n            }\n        ],\n        \"totalPrice\": 3062,\n        \"status\": \"shipping\",\n        \"shippingAddress\": \"67 mohamed ali street\",\n        \"createdAt\": \"2026-07-09T20:54:55.808Z\",\n        \"updatedAt\": \"2026-07-09T21:15:14.770Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

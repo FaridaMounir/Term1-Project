@@ -1,3 +1,7 @@
+// for running database and not giving error
+const dns = require("node:dns/promises");
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
 require("dotenv").config();
 const mongoose =require("mongoose");
 const connectDB =require("../db/connect");
@@ -39,43 +43,43 @@ const Seed =async()=>{
             {
                 name: "Hp EliteBook 665 G4",
                 price: 3261,
-                stock: 12,
+                stock: 98,
                 category: category1._id
             },
             {
                 name: "AirPods Pro",
                 price: 1452,
-                stock: 55,
+                stock: 121,
                 category: category1._id
             },
             {
                 name: "Xiaomi robot vaccum",
                 price: 2671,
-                stock: 10,
+                stock: 54,
                 category: category4._id
             },
             {
                 name: "Snake necklace",
                 price: 67,
-                stock: 23,
+                stock: 736,
                 category: category2._id
             },
             {
                 name: "The wide space",
                 price: 93,
-                stock: 32,
+                stock: 98,
                 category: category3._id
             },
             {
                 name: "Voleyball shoes",
                 price: 826,
-                stock: 17,
+                stock: 67,
                 category: category2._id
             },
             {
                 name: "Samsung fridge",
                 price: 6215,
-                stock: 7,
+                stock: 78,
                 category: category4._id
             }
 
